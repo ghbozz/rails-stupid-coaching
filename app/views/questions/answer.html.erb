@@ -1,0 +1,16 @@
+<!-- <h1>Questions#answer</h1>
+<p>Find me in app/views/questions/answer.html.erb</p> -->
+
+<div class="container text-center" id="response">
+  <% if @question == "I am going to work" %>
+    <strong><%= @answers[0] %></strong>
+  <%elsif @question.chars.last == "?" %>
+    <strong><%= @answers[1] %></strong>
+  <% else %>
+    <strong><%= @answers[2] %></strong>
+  <% end %>
+  <br>
+  <%= link_to "Go back", "/ask" %>
+</div>
+
+
